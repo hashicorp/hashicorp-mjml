@@ -3,38 +3,39 @@
     <mj-style inline="inline">
       body { background-color: #efefef }
     </mj-style>
-    <mj-breakpoint width="500px" />
+    <mj-style inline="inline">
+      h1, h2, h3, h4, h5 { margin: 0 0 1em }
+    </mj-style>
+    <mj-breakpoint width="450px" />
   </mj-head>
   <mj-body>
+    <mj-wrapper>
 
-    <!-- Section Header -->
-    <mj-wrapper text-align="left">
+      <!-- Section Header -->
       <mj-text>
         <h1>section-header</h1>
         <p>Header for a section-body</p>
       </mj-text>
-    </mj-wrapper>
-    <section-header>Header</section-header>
-    <mj-spacer></mj-spacer>
-    <section-header color="black" background-color="#999">Another Header</section-header>
+      <section-header>Header</section-header>
+      <mj-spacer></mj-spacer>
+      <section-header color="black" background-color="#999">Another Header</section-header>
+      <mj-spacer height="50px" />
 
-    <!-- Section Body -->
-    <mj-wrapper text-align="left">
+      <!-- Section Body -->
       <mj-text>
         <h1>section-body</h1>
         <p>Hashicorp container for Email</p>
       </mj-text>
-    </mj-wrapper>
-    <section-header>Consectetur adipiscing elit</section-header>
-    <section-body>
-      <mj-text>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque non malesuada tellus. Ut tempor pharetra massa, tincidunt dignissim turpis porta eget. Mauris nec lectus tincidunt, dapibus purus semper, feugiat metus. Morbi urna mauris, volutpat
-          sit amet mollis ac, rutrum in ex. Nunc eget feugiat orci. Nulla facilisi. Ut eu faucibus nulla.</p>
-      </mj-text>
-    </section-body>
+      <section-header>Consectetur adipiscing elit</section-header>
+      <section-body>
+        <mj-text>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque non malesuada tellus. Ut tempor pharetra massa, tincidunt dignissim turpis porta eget. Mauris nec lectus tincidunt, dapibus purus semper, feugiat metus. Morbi urna mauris,
+            volutpat sit amet mollis ac, rutrum in ex. Nunc eget feugiat orci. Nulla facilisi. Ut eu faucibus nulla.</p>
+        </mj-text>
+      </section-body>
+      <mj-spacer height="50px" />
 
-    <!-- HR -->
-    <mj-wrapper text-align="left">
+      <!-- HR -->
       <mj-text>
         <h1>hr</h1>
         <p>A simple colored bar for dividing areas</p>
@@ -89,10 +90,9 @@
           &lt;hr color="red" /&gt;
         </code>
       </mj-text>
-    </mj-wrapper>
+      <mj-spacer height="50px" />
 
-    <!-- Hashicorp Logo -->
-    <mj-wrapper text-align="left">
+      <!-- Hashicorp Logo -->
       <mj-text>
         <h1>hashicorp-logo</h1>
         <p>A HashiCorp logo which links back to HashiCorp website.</p>
@@ -120,87 +120,97 @@
           &lt;hashicorp-logo / &gt;
         </code>
       </mj-text>
-    </mj-wrapper>
+      <mj-spacer height="50px" />
 
-    <!-- CTA -->
-    <section-header>Call to Action</section-header>
-    <section-body text-align="left">
-      <mj-text>
-        <p>A standard call to Action. Wraps mj-button</p>
-      </mj-text>
-      <mj-table>
-        <tr>
-          <th>Attribute</th>
-          <th>Example</th>
-          <th>Default</th>
-        </tr>
-        <tr>
-          <td>background-color</td>
-          <td>#000000</td>
-          <td>#f45e43</td>
-        </tr>
-        <tr>
-          <td>color</td>
-          <td>white</td>
-          <td>#fff</td>
-        </tr>
-        <tr>
-          <td>href</td>
-          <td>https://www.hashicorp.com</td>
-          <td>-</td>
-        </tr>
-        <tr>
-          <td>target</td>
-          <td>_self</td>
-          <td>_blank</td>
-        </tr>
-        <tr>
-          <td>padding</td>
-          <td>12px 0 16px</td>
-          <td>12px 0</td>
-        </tr>
-      </mj-table>
-      <cta href="https://www.hashicorp.com">Text goes here</cta>
-      <mj-text>
-        <code>
-          &lt;cta href="https://www.hashicorp.com" &gt; Text Goes Here &lt;/cta&gt;
-        </code>
-      </mj-text>
-      <cta background-color="red" color: "black">Text goes here</cta>
-      <mj-text>
-        <code>
-          &lt;cta background-color="red" color: "black"&gt; Text Goes Here &lt;/cta&gt;
-        </code>
-      </mj-text>
-    </section-body>
+      <!-- CTA -->
+      <section-header>Call to Action</section-header>
+      <section-body text-align="left">
+        <mj-text>
+          <p>A standard call to Action. Wraps mj-button</p>
+        </mj-text>
+        <mj-table>
+          <tr>
+            <th>Attribute</th>
+            <th>Example</th>
+            <th>Default</th>
+          </tr>
+          <tr>
+            <td>background-color</td>
+            <td>#000000</td>
+            <td>#f45e43</td>
+          </tr>
+          <tr>
+            <td>color</td>
+            <td>white</td>
+            <td>#fff</td>
+          </tr>
+          <tr>
+            <td>href</td>
+            <td>https://www.hashicorp.com</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>target</td>
+            <td>_self</td>
+            <td>_blank</td>
+          </tr>
+          <tr>
+            <td>padding</td>
+            <td>12px 0 16px</td>
+            <td>12px 0</td>
+          </tr>
+        </mj-table>
+        <cta href="https://www.hashicorp.com">Text goes here</cta>
+        <mj-text>
+          <code>
+            &lt;cta href="https://www.hashicorp.com" &gt; Text Goes Here &lt;/cta&gt;
+          </code>
+        </mj-text>
+        <cta background-color="red" color: "black">Text goes here</cta>
+        <mj-text>
+          <code>
+            &lt;cta background-color="red" color: "black"&gt; Text Goes Here &lt;/cta&gt;
+          </code>
+        </mj-text>
+      </section-body>
+      <mj-spacer height="50px" />
 
-    <!-- Stacked Teaser -->
-    <section-header>Stacked Teasers</section-header>
-    <section-body text-align="left">
-      <mj-text>
-        <p>Teaser content containing and image and summar stacked. Two sizes available: small and large</p>
-      </mj-text>
-      <stacked-teaser size="small" href="https://www.hashicorp.com" image-src="http://placekitten.com/400/400">
-        Praesent ante massa, rutrum lobortis erat a, congue pulvinar ipsum. Quisque faucibus, erat tincidunt mollis ullamcorper, dui ligula lacinia felis, sollicitudin euismod quam lectus vel dolor. Pellentesque viverra urna ligula, a luctus libero varius id.
-        Integer in ligula eu quam fringilla euismod.
-      </stacked-teaser>
+      <!-- Stacked Teaser -->
+      <section-header>Stacked Teasers</section-header>
+      <section-body text-align="left">
+        <mj-text>
+          <p>Teaser content containing and image and summar stacked. Two sizes available: small and large</p>
+        </mj-text>
+        <stacked-teaser size="large" href="https://www.hashicorp.com" image-src="http://placekitten.com/400/400">
+          <h4><strong>Headline</strong></h4>
+          <p>
+            Praesent ante massa, rutrum lobortis erat a, congue pulvinar ipsum. Quisque faucibus, erat tincidunt mollis ullamcorper, dui ligula lacinia felis, sollicitudin euismod quam lectus vel dolor. Pellentesque viverra urna ligula, a luctus libero varius id.
+            Integer in ligula eu quam fringilla euismod.
+          </p>
+        </stacked-teaser>
+        <stacked-teaser size="small" href="https://www.hashicorp.com" image-src="http://placekitten.com/400/400">
+          <h4><strong>Headline</strong></h4>
+          <p>
+            Praesent ante massa, rutrum lobortis erat a, congue pulvinar ipsum. Quisque faucibus, erat tincidunt mollis ullamcorper, dui ligula lacinia felis, sollicitudin euismod quam lectus vel dolor. Pellentesque viverra urna ligula, a luctus libero varius id.
+            Integer in ligula eu quam fringilla euismod.
+          </p>
+        </stacked-teaser>
+      </section-body>
+      <mj-spacer height="50px" />
 
+      <!-- Exit Link -->
+      <section-header>Exit Link</section-header>
+      <section-body text-align="left">
+        <mj-text>
+          <p>Text CTA followed by arrow</p>
+        </mj-text>
+        <exit-link href="https://www.hashicorp.com">Default</exit-link>
+        <exit-link href="https://www.hashicorp.com" color="red">Text goes here</exit-link>
+        <exit-link href="https://www.hashicorp.com" color="red" font-size="20px">MAJOR LINK HERE</exit-link>
+      </section-body>
+      <mj-spacer height="50px" />
 
-    </section-body>
-
-    <!-- Exit Link -->
-    <section-header>Exit Link</section-header>
-    <section-body text-align="left">
-      <mj-text>
-        <p>Text CTA followed by arrow</p>
-      </mj-text>
-      <exit-link href="https://www.hashicorp.com">Default</exit-link>
-      <exit-link href="https://www.hashicorp.com" color="red">Text goes here</exit-link>
-      <exit-link href="https://www.hashicorp.com" color="red" font-size="20px">MAJOR LINK HERE</exit-link>
-    </section-body>
-
-    <!-- HashiBits Header -->
-    <mj-wrapper text-align="left">
+      <!-- HashiBits Header -->
       <mj-text>
         <h1>hashibits-header</h1>
         <p>Header for hashibits</p>
@@ -212,19 +222,11 @@
           Quisque congue, nibh a feugiat bibendum, massa ante pretium nisi, sed scelerisque dui purus porttitor enim.
         </p>
       </hashibits-header>
-    </mj-wrapper>
+      <mj-spacer height="50px" />
 
-    <!-- The second component, mj-image-text renders as a section -->
-    <mj-image-text background-color="#DD685B" image-src="https://mjml.io/assets/img/mjml-logo.png" image-width="100px" font-size="24px" image-position="left">
-      MJML rules!
-    </mj-image-text>
-
-    <!-- The third component, mj-layout, also renders as a section -->
-    <mj-layout>
-      <mj-text color="blue" font-size="10px">
-        A super nice layout component
-      </mj-text>
-    </mj-layout>
-
+      <!-- The second component, mj-image-text renders as a section -->
+      <mj-image-text background-color="#DD685B" image-src="https://mjml.io/assets/img/mjml-logo.png" image-width="100px" font-size="24px" image-position="left">
+        MJML rules!
+      </mj-image-text>
   </mj-body>
 </mjml>

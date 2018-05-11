@@ -1,4 +1,9 @@
+import { registerDependencies } from 'mjml-validator'
 import { BodyComponent } from 'mjml-core'
+
+registerDependencies({
+  'mj-wrapper': ['section-body']
+})
 
 export default class SectionBody extends BodyComponent {
   static allowedAttributes = {
@@ -11,8 +16,7 @@ export default class SectionBody extends BodyComponent {
   static defaultAttributes = {
     margin: '0 auto 20px',
     padding: '0 25px 20px',
-    'background-color': 'white',
-    width: '550px'
+    'background-color': 'white'
   }
 
   getStyles () {

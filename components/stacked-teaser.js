@@ -22,14 +22,20 @@ export default class StackedTeaser extends BodyComponent {
   headStyle = breakpoint =>
     `
       @media only screen and (max-width:${breakpoint}) {
-        .stacked-teaser-column,
+
+        .stacked-teaser-column {
+          margin: 0 0 12px!important;
+          padding: 12px 0!important;
+        }
+
         .stacked-teaser-column * {
           text-align: center!important;
           padding: 0!important;
         }
 
-        .stacked-teaser-column-image {
-          padding: 0 0 16px!important;
+        .stacked-teaser-column-image img {
+          padding: 12px 0 0!important;
+          margin: 0!important;
         }
       }
   `
@@ -38,7 +44,9 @@ export default class StackedTeaser extends BodyComponent {
     return `
       <mj-column
         ${this.htmlAttributes({
-          width: '25%',
+          width: this.getAttribute('size').toLowerCase() === 'large'
+        ? '25%'
+        : '10%',
           padding: '16px 0',
           'css-class': 'stacked-teaser-column stacked-teaser-column-image'
         })}
@@ -47,8 +55,7 @@ export default class StackedTeaser extends BodyComponent {
           ${this.htmlAttributes({
             padding: '10px',
             src: this.getAttribute('image-src'),
-            padding: '0px',
-            width: '125px'
+            padding: '0px'
           })}
         >
         </mj-image>
@@ -60,7 +67,9 @@ export default class StackedTeaser extends BodyComponent {
     return `
       <mj-column
         ${this.htmlAttributes({
-          width: '75%',
+          width: this.getAttribute('size').toLowerCase() === 'large'
+        ? '75%'
+        : '90%',
           padding: '16px 0',
           'css-class': 'stacked-teaser-column'
         })}
