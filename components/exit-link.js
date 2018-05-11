@@ -38,10 +38,10 @@ export default class ExitLink extends BodyComponent {
       })}>
         <mj-text>
           <a ${this.htmlAttributes({
-            href: this.getAttribute('href'),
-            target: '_blank',
-            style: 'a'
-          })}>
+        href: this.getAttribute('href'),
+        target: '_blank',
+        style: 'a'
+      })}>
             ${this.getContent()} &#10142;
           </a>
         </mj-text>

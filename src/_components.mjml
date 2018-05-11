@@ -182,19 +182,50 @@
           <p>Teaser content containing and image and summar stacked. Two sizes available: small and large</p>
         </mj-text>
         <stacked-teaser size="large" href="https://www.hashicorp.com" image-src="http://placekitten.com/400/400">
-          <h4><strong>Headline</strong></h4>
-          <p>
-            Praesent ante massa, rutrum lobortis erat a, congue pulvinar ipsum. Quisque faucibus, erat tincidunt mollis ullamcorper, dui ligula lacinia felis, sollicitudin euismod quam lectus vel dolor. Pellentesque viverra urna ligula, a luctus libero varius id.
-            Integer in ligula eu quam fringilla euismod.
-          </p>
+          <mj-text>
+            <p>
+              This whole section is linked
+            </p>
+          </mj-text>
         </stacked-teaser>
-        <stacked-teaser size="small" href="https://www.hashicorp.com" image-src="http://placekitten.com/400/400">
-          <h4><strong>Headline</strong></h4>
-          <p>
-            Praesent ante massa, rutrum lobortis erat a, congue pulvinar ipsum. Quisque faucibus, erat tincidunt mollis ullamcorper, dui ligula lacinia felis, sollicitudin euismod quam lectus vel dolor. Pellentesque viverra urna ligula, a luctus libero varius id.
-            Integer in ligula eu quam fringilla euismod.
-          </p>
+        <stacked-teaser size="small" image-src="http://placekitten.com/400/400">
+          <mj-text>
+            <h4><strong>Headline</strong></h4>
+            <p>
+              Praesent ante massa, rutrum lobortis erat a, congue pulvinar ipsum. Quisque faucibus, erat tincidunt mollis ullamcorper, dui ligula lacinia felis, sollicitudin euismod quam lectus vel dolor. Pellentesque viverra urna ligula, a luctus libero varius id.
+              Integer in ligula eu quam fringilla euismod.
+            </p>
+          </mj-text>
+          <exit-link href="https://www.hashicorp.com">Exit link</exit-link>
         </stacked-teaser>
+      </section-body>
+      <mj-spacer height="50px" />
+
+      <!-- Calendar Teaser -->
+      <section-header>Calendar Teasers</section-header>
+      <section-body>
+        <mj-text>
+          <p>Calendar item. Takes a Components</p>
+        </mj-text>
+        <calendar-teaser month="Dec" date="25" href="https://www.hashicorp.com">
+          <mj-text>
+            <h4><strong>Headline</strong></h4>
+            <p>
+              Praesent ante massa, rutrum lobortis erat a, congue pulvinar ipsum. Quisque faucibus, erat tincidunt mollis ullamcorper, dui ligula lacinia felis, sollicitudin euismod quam lectus vel dolor. Pellentesque viverra urna ligula, a luctus libero varius id.
+              Integer in ligula eu quam fringilla euismod.
+            </p>
+          </mj-text>
+        </calendar-teaser>
+        <calendar-teaser month="Mar" date="5" href="https://www.hashicorp.com">
+          <mj-text>
+            <h4><strong>Headline</strong></h4>
+            <p>
+              Praesent ante massa, rutrum lobortis erat a, congue pulvinar ipsum. Quisque faucibus, erat tincidunt mollis ullamcorper, dui ligula lacinia felis, sollicitudin euismod quam lectus vel dolor. Pellentesque viverra urna ligula, a luctus libero varius id.
+              Integer in ligula eu quam fringilla euismod.
+            </p>
+          </mj-text>
+          <exit-link href="https://www.hashicorp.com" font-size="16px">REGISTER NOW</exit-link>
+        </calendar-teaser>
       </section-body>
       <mj-spacer height="50px" />
 

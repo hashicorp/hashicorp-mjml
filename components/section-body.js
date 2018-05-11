@@ -1,9 +1,4 @@
-import { registerDependencies } from 'mjml-validator'
 import { BodyComponent } from 'mjml-core'
-
-registerDependencies({
-  'mj-wrapper': ['section-body']
-})
 
 export default class SectionBody extends BodyComponent {
   static allowedAttributes = {
@@ -19,7 +14,7 @@ export default class SectionBody extends BodyComponent {
     'background-color': 'white'
   }
 
-  getStyles () {
+  getStyles() {
     return {
       container: {
         padding: this.getAttribute('padding'),
@@ -31,7 +26,7 @@ export default class SectionBody extends BodyComponent {
     }
   }
 
-  render () {
+  render() {
     return `
       <div ${this.htmlAttributes({ style: 'container' })}>
         ${this.renderChildren()}

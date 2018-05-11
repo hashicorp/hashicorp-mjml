@@ -1,13 +1,6 @@
-import { registerDependencies } from 'mjml-validator'
 import { BodyComponent } from 'mjml-core'
 
-registerDependencies({
-  'mj-image-text': [],
-  'mj-section': ['mj-image-text']
-})
-
 export default class StackedTeaser extends BodyComponent {
-  static endingTag = true
 
   static allowedAttributes = {
     size: 'enum(small,large)',
@@ -19,8 +12,8 @@ export default class StackedTeaser extends BodyComponent {
     size: 'small'
   }
 
-  headStyle = breakpoint =>
-    `
+  headStyle(breakpoint) {
+    return (`
       @media only screen and (max-width:${breakpoint}) {
 
         .stacked-teaser-column {
@@ -38,67 +31,78 @@ export default class StackedTeaser extends BodyComponent {
           margin: 0!important;
         }
       }
-  `
+    `)
+  }
 
-  renderImage () {
+  renderImage() {
     return `
       <mj-column
         ${this.htmlAttributes({
-          width: this.getAttribute('size').toLowerCase() === 'large'
-        ? '25%'
-        : '10%',
-          padding: '16px 0',
-          'css-class': 'stacked-teaser-column stacked-teaser-column-image'
-        })}
+        width: this.getAttribute('size').toLowerCase() === 'large'
+          ? '20%'
+          : '12%',
+        padding: '16px 0',
+        'css-class': 'stacked-teaser-column stacked-teaser-column-image'
+      })}
       >
         <mj-image
           ${this.htmlAttributes({
-            padding: '10px',
-            src: this.getAttribute('image-src'),
-            padding: '0px'
-          })}
+        padding: '10px',
+        src: this.getAttribute('image-src'),
+        padding: '0px'
+      })}
         >
         </mj-image>
     </mj-column>
     `
   }
 
-  renderText () {
+  renderText() {
     return `
       <mj-column
         ${this.htmlAttributes({
-          width: this.getAttribute('size').toLowerCase() === 'large'
-        ? '75%'
-        : '90%',
-          padding: '16px 0',
-          'css-class': 'stacked-teaser-column'
-        })}
+        width: this.getAttribute('size').toLowerCase() === 'large'
+          ? '80%'
+          : '88%',
+        padding: '16px 0',
+        'css-class': 'stacked-teaser-column'
+      })}
       >
         <mj-text
           ${this.htmlAttributes({
-            color: 'black',
-            'font-size': '14px',
-            padding: '0 0 0 5%'
-          })}
-        >
-          ${this.getContent()}
+        color: 'black',
+        'font-size': '14px',
+        padding: '0 0 0 4%'
+      })}
+        >${this.renderChildren()}
+        
         </mj-text>
       </mj-column>
     `
   }
 
-  render () {
-    const content = [this.renderImage(), this.renderText()]
+  getStyles() {
+    return {
+      container: {
+        'border-top': '1px solid #ccc',
+        padding: '0px',
+      }
+    }
+  }
 
-    return this.renderMJML(
+  render() {
+    return (
       `
-			<mj-section ${this.htmlAttributes({
-  'border-top': '1px solid #ccc',
-  padding: '0px',
-  'css-class': 'stacked-teaser'
-})}>
-        ${content}
-			</mj-section>
+			<a ${this.htmlAttributes({
+        style: 'container',
+        'css-class': 'stacked-teaser',
+        href: 'https://www.hashicorp.com'
+      })}>
+        ${[
+        this.renderMJML(this.renderImage()),
+        this.renderMJML(this.renderText())
+      ]}
+			</a>
 		`
     )
   }

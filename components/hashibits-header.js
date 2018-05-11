@@ -28,11 +28,11 @@ export default class HashibitsHeader extends BodyComponent {
     return this.renderMJML(`
       <mj-wrapper ${this.htmlAttributes({
         style: 'wrapper',
-        padding: '20px 40px 0',
+        padding: '20px 20px 0',
         'background-color': 'black'
       })}>
         <mj-text ${this.htmlAttributes({
-        color: '#666',
+        color: '#888',
         'line-height': '16px',
         align: 'center'
       })}>
