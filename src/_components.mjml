@@ -33,6 +33,11 @@
             volutpat sit amet mollis ac, rutrum in ex. Nunc eget feugiat orci. Nulla facilisi. Ut eu faucibus nulla.</p>
         </mj-text>
       </section-body>
+      <section-body border="true">
+        <mj-text>
+          <p>Check out my border</p>
+        </mj-text>
+      </section-body>
       <mj-spacer height="50px" />
 
       <!-- Hashicorp Logo -->
