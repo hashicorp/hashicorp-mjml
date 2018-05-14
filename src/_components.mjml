@@ -216,7 +216,7 @@
             </p>
           </mj-text>
         </calendar-teaser>
-        <calendar-teaser month="Mar" date="5" href="https://www.hashicorp.com">
+        <calendar-teaser month="Mar" date="5">
           <mj-text>
             <h4><strong>Headline</strong></h4>
             <p>
@@ -226,6 +226,34 @@
           </mj-text>
           <exit-link href="https://www.hashicorp.com" font-size="16px">REGISTER NOW</exit-link>
         </calendar-teaser>
+      </section-body>
+      <mj-spacer height="50px" />
+
+      <!-- Columned Teasers -->
+      <section-header>Columned Teasers</section-header>
+      <section-body>
+        <mj-text>
+          <p>Teasers arranged in two columns</p>
+        </mj-text>
+        <column-teaser img-src="http://placekitten.com/800/800" href="">
+          <mj-text>
+            <h4>Headline</h4>
+            <p>
+              Praesent ante massa, rutrum lobortis erat a, congue pulvinar ipsum. Quisque faucibus, erat tincidunt mollis ullamcorper, dui ligula lacinia felis, sollicitudin euismod quam lectus vel dolor. Pellentesque viverra urna ligula, a luctus libero varius id.
+              Integer in ligula eu quam fringilla euismod.
+            </p>
+          </mj-text>
+        </column-teaser>
+        <column-teaser img-src="http://placekitten.com/800/800" href="">
+          <mj-text>
+            <h4>Headline</h4>
+            <p>
+              Praesent ante massa, rutrum lobortis erat a, congue pulvinar ipsum. Quisque faucibus, erat tincidunt mollis ullamcorper, dui ligula lacinia felis, sollicitudin euismod quam lectus vel dolor. Pellentesque viverra urna ligula, a luctus libero varius id.
+              Integer in ligula eu quam fringilla euismod.
+            </p>
+          </mj-text>
+          <exit-link href="https://www.hashicorp.com" font-size="16px">REGISTER NOW</exit-link>
+        </column-teaser>
       </section-body>
       <mj-spacer height="50px" />
 

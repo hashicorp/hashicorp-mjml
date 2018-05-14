@@ -23,12 +23,16 @@ export default class StackedTeaser extends BodyComponent {
 
         .stacked-teaser-column * {
           text-align: center!important;
-          padding: 0!important;
         }
 
-        .stacked-teaser-column-image img {
+        .stacked-teaser-column > td {
+          padding: 12px 0!important;
+        }
+
+        .stacked-teaser-column-image {
           padding: 12px 0 0!important;
-          margin: 0!important;
+          margin: 0 auto !important;
+          width: 25% !important;
         }
       }
     `)
@@ -91,19 +95,21 @@ export default class StackedTeaser extends BodyComponent {
   }
 
   render() {
+    const href = this.getAttribute('href')
+    const content = [
+      this.renderMJML(this.renderImage()),
+      this.renderMJML(this.renderText())
+    ]
     return (
       `
-			<a ${this.htmlAttributes({
+			<div ${this.htmlAttributes({
         style: 'container',
         'css-class': 'stacked-teaser',
         href: 'https://www.hashicorp.com'
       })}>
-        ${[
-        this.renderMJML(this.renderImage()),
-        this.renderMJML(this.renderText())
-      ]}
-			</a>
-		`
+      ${href ? `<a href="${href}">${content}</a>` : content}
+			</div >
+  `
     )
   }
 }

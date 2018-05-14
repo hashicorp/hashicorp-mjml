@@ -16,6 +16,7 @@ import SectionBody from './components/section-body'
 import SectionHeader from './components/section-header'
 import StackedTeaser from './components/stacked-teaser'
 import CalendarTeaser from './components/calendar-teaser'
+import ColumnTeaser from './components/column-teaser'
 
 registerComponent(Hr)
 registerComponent(HashicorpLogo)
@@ -26,6 +27,7 @@ registerComponent(SectionBody)
 registerComponent(SectionHeader)
 registerComponent(StackedTeaser)
 registerComponent(CalendarTeaser)
+registerComponent(ColumnTeaser)
 
 // Import and register your components here
 

@@ -1,6 +1,5 @@
 import { BodyComponent } from 'mjml-core'
 
-// TODO: Figure out why padding doesn't work here.
 export default class Cta extends BodyComponent {
   // component is childless
   static endingTag = true
@@ -25,14 +24,14 @@ export default class Cta extends BodyComponent {
         padding: this.getAttribute('padding')
       })}>
         <mj-button ${this.htmlAttributes({
-          href: this.getAttribute('href'),
-          target: '_blank',
-          color: this.getAttribute('color'),
-          'background-color': this.getAttribute('background-color'),
-          padding: this.getAttribute('padding'),
-          'font-size': '16px',
-          'border-radius': '2px'
-        })}>${this.getContent()}</mj-button>
+        href: this.getAttribute('href'),
+        target: '_blank',
+        color: this.getAttribute('color'),
+        'background-color': this.getAttribute('background-color'),
+        padding: this.getAttribute('padding'),
+        'font-size': '16px',
+        'border-radius': '2px'
+      })}>${this.getContent()}</mj-button>
       </mj-wrapper>
 		`)
   }
