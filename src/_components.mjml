@@ -35,63 +35,6 @@
       </section-body>
       <mj-spacer height="50px" />
 
-      <!-- HR -->
-      <mj-text>
-        <h1>hr</h1>
-        <p>A simple colored bar for dividing areas</p>
-      </mj-text>
-      <mj-table>
-        <tr>
-          <th>Attribute</th>
-          <th>Example</th>
-          <th>Description</th>
-          <th>Default</th>
-        </tr>
-        <tr>
-          <td>color</td>
-          <td>#000000</td>
-          <td>background color of bar</td>
-          <td>#1563ff (blue)</td>
-        </tr>
-        <tr>
-          <td>weight </td>
-          <td>10px</td>
-          <td>height of color bar</td>
-          <td>10px</td>
-        </tr>
-        <tr>
-          <td>margin-top</td>
-          <td>10px</td>
-          <td></td>
-          <td>10px</td>
-        </tr>
-        <tr>
-          <td>margin-bottom</td>
-          <td>10px</td>
-          <td></td>
-          <td>10px</td>
-        </tr>
-      </mj-table>
-      <hr />
-      <mj-text>
-        <code>
-          &lt;hr /&gt;
-        </code>
-      </mj-text>
-      <hr weight="20px" margin-top="16px" />
-      <mj-text>
-        <code>
-          &lt;hr weight="20px" margin-top="16px" / &gt;
-        </code>
-      </mj-text>
-      <hr color="red" />
-      <mj-text>
-        <code>
-          &lt;hr color="red" /&gt;
-        </code>
-      </mj-text>
-      <mj-spacer height="50px" />
-
       <!-- Hashicorp Logo -->
       <mj-text>
         <h1>hashicorp-logo</h1>

@@ -7,7 +7,6 @@ import path from 'path'
 import { exec } from 'child_process'
 import mjml2html from 'mjml'
 import { registerComponent } from 'mjml-core'
-import Hr from './components/hr'
 import HashicorpLogo from './components/hashicorp-logo'
 import Cta from './components/cta'
 import ExitLink from './components/exit-link'
@@ -18,7 +17,6 @@ import StackedTeaser from './components/stacked-teaser'
 import CalendarTeaser from './components/calendar-teaser'
 import ColumnTeaser from './components/column-teaser'
 
-registerComponent(Hr)
 registerComponent(HashicorpLogo)
 registerComponent(Cta)
 registerComponent(ExitLink)
